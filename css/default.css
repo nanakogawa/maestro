@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'helvetica-neue-thin';
+  src: url('helvetica-neue-thin.otf');
+}
+
+@font-face {
+  font-family: 'helvetica-neue-ultra-thin2';
+  src: url('helvetica-neue-ultra-thin.otf');
+}
+
+body {
+  font-family: helvetica-neue-ultra-thin2, sans-serif;
+  font-size: 18px;
+}
+
+h1 {
+  font-family: helvetica-neue-thin, sans-serif;
+  margin: 0 0 10px 0;
+}
+
+a:hover {
+  color: #ff445f !important;
+  background: none !important;
+}
+
+.nav li a:hover {
+  color: #ff445f !important;
+}
+
+.hamburger:hover {
+  color: #ff445f !important;
+  background: none !important;
+  border: none !important;
+}
+
+.navbar {
+  margin: 0;
+  padding: 20px;
+  background-color: #fff !important;
+}
+
+.navbar-header {
+  border: none !important;
+}
+
+.collapse-button {
+  border: none !important;
+}
+
+.collapse-button:hover {
+  background: none !important;
+}
+
+.dropdown-menu {
+  font-size: 18px;
+}
+
+.navbar-brand {
+  margin: -10px 0 0 -10px !important;
+  font-weight: bolder;
+  font-family: helvetica-neue-thin, sans-serif;
+}
+
+.hamburger,
+.navbar-brand,
+.nav li a{
+  color: #4d4d4d !important;
+}
+
+.headphones {
+  font-size: 25px;
+  margin: 0 0 0 2px;
+}
+
+.start-listening-btn:hover {
+  color: #ff445f;
+}
+
+.quote {
+  text-align: center;
+  margin: 50px 0 0 0;
+}
+
+.heart {
+  font-size: 25px;
+  color: #ff445f;
+}
+
+.down-arrow-one {
+  margin: 30px 0 0 0;
+  color: #ff445f;
+  font-size: 30px;
+}
+
+.playlist-search-container {
+  padding: 140px 10px 0 10px;
+  text-align: center;
+}
+
+.playlist-container {
+  background: #c5c5c5;
+  height: 600px;
+  margin: 50px 0;
+}
+
+.search-container {
+  background: #ff9790;
+  height: 600px;
+  margin: 50px 0 0 0;
+}
+
+.space {
+  height: 1000px;
+}

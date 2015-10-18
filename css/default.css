@@ -18,6 +18,10 @@ h1 {
   margin: 0 0 10px 0;
 }
 
+.center {
+  text-align: center !important;
+}
+
 a:hover {
   color: #ff445f !important;
   background: none !important;
@@ -33,6 +37,35 @@ a:hover {
   border: none !important;
 }
 
+.collapse-button:hover {
+  background: none !important;
+}
+
+.start-listening-btn:hover {
+  font-weight: bold;
+  color: #ff445f;
+  border: 1px solid #ff445f;
+  background-color: transparent;
+}
+
+.premium-btn:hover {
+  border: 1px solid rgb(255, 189, 123);
+  color: #ffbd7b;
+  background: transparent !important;
+}
+
+.arrow-white:hover {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.arrow-pink:hover {
+  border: 1px solid #ff445f;
+  border-radius: 50%;
+  padding: 10px;
+}
+
 .navbar {
   margin: 0;
   padding: 20px;
@@ -45,10 +78,6 @@ a:hover {
 
 .collapse-button {
   border: none !important;
-}
-
-.collapse-button:hover {
-  background: none !important;
 }
 
 .dropdown-menu {
@@ -72,21 +101,61 @@ a:hover {
   margin: 0 0 0 2px;
 }
 
-.start-listening-btn:hover {
-  color: #ff445f;
-}
-
-.quote {
+section.concert-banner {
+  font-size: 20px;
+  font-weight: 500;
+  background-size: cover;
+  width: 100%;
+  height: 1000px;
+  margin: 0;
+  color: #fff;
   text-align: center;
-  margin: 50px 0 0 0;
+  z-index: -200;
 }
 
-.heart {
-  font-size: 25px;
-  color: #ff445f;
+video#fullscreen {
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  z-index: -200;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.banner-text {
+  letter-spacing: 0.02em;
+  position: absolute;
+  margin-top: 380px;
+  line-height: 30px;
+}
+
+h1.welcome {
+  font-size: 40px;
+}
+
+.start-listening-btn {
+  font-family: helvetica-neue-thin, sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  border: 1px solid #ffffff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.banner-arrow {
+  position: absolute;
+  margin-top: 870px;
 }
 
 .down-arrow-one {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.down-arrow-two {
   margin: 30px 0 0 0;
   color: #ff445f;
   font-size: 30px;
@@ -94,7 +163,6 @@ a:hover {
 
 .playlist-search-container {
   padding: 140px 10px 0 10px;
-  text-align: center;
 }
 
 .playlist-container {
@@ -104,11 +172,62 @@ a:hover {
 }
 
 .search-container {
-  background: #ff9790;
+  background: #ff615d;
   height: 600px;
   margin: 50px 0 0 0;
 }
 
-.space {
+.create-account-container {
   height: 1000px;
+  width: 100%;
+  padding: 93px 0 0 0;
+}
+
+.create-account {
+  font-size: 20px;
+  font-weight: 500;
+  background: linear-gradient(to right, rgb(255, 68, 95), rgb(255, 189, 123));
+  background-size: cover;
+  width: 100%;
+  height: 900px;
+  padding: 60px 0 0 0;
+  color: #fff;
+}
+
+.down-arrow-three {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.try-premium-container {
+  height: 175px;
+  width: 100%;
+  padding: 62px 0 0 0;
+}
+
+.premium-btn {
+  border: 1px solid #ff445f;
+  color: #ff445f;
+  font-size: 25px;
+  border-radius: 35px;
+  padding: 10px 20px;
+}
+
+.footer {
+  height: 250px;
+  width: 100%;
+  background-color: #282828;
+}
+
+.social-media {
+  padding-top: 150px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
 }

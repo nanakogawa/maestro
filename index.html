@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="parallax.css">
+    <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="default.css">
   </head>
   <body>
@@ -30,7 +31,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a href="#">Log In</a></li>
-                <li><a href="#">Sign Up</a></li>
+                <li><a href="#create-account">Sign Up</a></li>
               </ul>
             </li>
             <li><a href="#">About Us</a></li>
@@ -40,7 +41,7 @@
       </div><!-- /.container-fluid -->
     </nav>
     <section class="concert-banner">
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-5 col-md-6 banner-text">
         <h1 class="welcome">Welcome!</h1>
         Browse through millions of tracks in all genres.<br>
         Create a playlist and choose what you want to listen to.<br>
@@ -49,26 +50,64 @@
           <button type="button" class="btn btn-default start-listening-btn">Start Listening!</button>
         </a>
       </div>
+      <div class="col-xs-12 center banner-arrow">
+        <a href="#playlist-search">
+          <div class="glyphicon glyphicon-menu-down arrow-white down-arrow-one bounce center"></div>
+        </a>
+      </div>
+      <video autoplay loop muted id="fullscreen">
+        <source src="party.mp4" type="video/mp4">
+      </video>
     </section>
-    <div class="quote">
-      <h1>All the music you love, in one place <span class="glyphicon glyphicon-heart heart"></span></h1>
-      <a href="#playlist-search"><div class="glyphicon glyphicon-menu-down down-arrow-one"></div></a>
-    </div>
-    <div class="playlist-search-container" id="playlist-search">
-      <div class="col-md-4">
-        <h1>My Playlist</h1>
-        <div class="playlist-container">
-          <!-- music -->
+    <div class="playlist-search-container center" id="playlist-search">
+      <div class="container-fluid">
+        <div class="col-md-5">
+          <h1>My Playlist</h1>
+          <div class="playlist-container">
+            <!-- music -->
+          </div>
         </div>
-      </div>
-      <div class="col-md-8">
-        <h1>Search Music</h1>
-        <div class="search-container">
-          <!-- music -->
+        <div class="col-md-7">
+          <h1>Search Music</h1>
+          <div class="search-container">
+            <!-- music -->
+          </div>
         </div>
       </div>
     </div>
-    <div class="space"></div>
+    <div class="down-arrow-container center">
+      <div class="container-fluid">
+        <div class="col-md-12">
+          <a href="#create-account">
+            <div class="glyphicon glyphicon-menu-down arrow-pink down-arrow-two bounce"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="create-account-container" id="create-account">
+      <div class="create-account center">
+        <h1>Create an Account</h1>
+        <a href="#premium">
+          <div class="glyphicon glyphicon-menu-down arrow-white down-arrow-three bounce center"></div>
+        </a>
+      </div>
+    </div>
+    <div class="try-premium-container center" id="premium">
+      <div class="container-fluid">
+        <div class="col-md-12">
+          <div class="try-premium">
+            <h1>Love us? Try <button type="button" class="btn btn-default premium-btn">Premium</button></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="social-media center">
+        <a href="#"><img src="facebook.png" class="icon"></a>
+        <a href="#"><img src="twitter.png" class="icon"></a>
+        <a href="#"><img src="instagram.png" class="icon"></a>
+      </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="parallax.js"></script>

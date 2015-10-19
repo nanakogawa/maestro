@@ -93,23 +93,33 @@
           <div ng-controller="FormValController">
             <div class="container">
               <div class="col-md-12">
-                First Name:<br>
+                First Name:
+                <span class="glyphicon glyphicon-ok ok-check val-sign fName"></span>
+                <span class="glyphicon glyphicon-remove x-mark val-sign fName"></span><br>
                 <input type="text" ng-model="user.firstName" required>
               </div>
               <div class="col-md-12">
-                Last Name:<br>
+                Last Name:
+                <span class="glyphicon glyphicon-ok ok-check val-sign lName"></span>
+                <span class="glyphicon glyphicon-remove x-mark val-sign lName"></span><br>
                 <input type="text" ng-model="user.lastName" required>
               </div>
               <div class="col-md-12">
-                E-mail: <br>
+                E-mail:
+                <span class="glyphicon glyphicon-ok ok-check val-sign userEmail"></span>
+                <span class="glyphicon glyphicon-remove x-mark val-sign userEmail"></span><br>
                 <input type="email" ng-model="user.email" required>
               </div>
               <div class="col-md-12">
-                Password: <br>
+                Password:
+                <span class="glyphicon glyphicon-ok ok-check val-sign userPass"></span>
+                <span class="glyphicon glyphicon-remove x-mark val-sign userPass"></span><br>
                 <input type="text" ng-model="user.password" required>
               </div>
               <div class="col-md-12">
-                Re<span class="letter-spacing"></span>-Type Password: <br>
+                Re<span class="letter-spacing"></span>-Type Password:
+                <span class="glyphicon glyphicon-ok ok-check val-sign userRePass"></span>
+                <span class="glyphicon glyphicon-remove x-mark val-sign userRePass"></span><br>
                 <input type="text" ng-model="user.reTypePassword" required>
               </div>
               <div class="col-md-12">

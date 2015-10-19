@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>maestro! | music you love</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="validation.css">
     <link rel="stylesheet" href="default.css">
   </head>
   <body>
@@ -88,29 +90,31 @@
       <div class="create-account center">
         <h1>Create an Account</h1>
         <div class="form-container center">
-          <div class="container">
-            <div class="col-md-12">
-              First Name:<br>
-              <input type="text" ng-model="user.firstName" required>
-            </div>
-            <div class="col-md-12">
-              Last Name:<br>
-              <input type="text" ng-model="user.lastName" required>
-            </div>
-            <div class="col-md-12">
-              E-mail: <br>
-              <input type="email" ng-model="user.email" required>
-            </div>
-            <div class="col-md-12">
-              Password: <br>
-              <input type="text" ng-model="user.password" required>
-            </div>
-            <div class="col-md-12">
-              Re<span class="letter-spacing"></span>-Type Password: <br>
-              <input type="text" ng-model="user.password" required>
-            </div>
-            <div class="col-md-12">
-              <button type="submit" ng-click="update(user)" class="create-btn">Create</button>
+          <div ng-controller="FormValController">
+            <div class="container">
+              <div class="col-md-12">
+                First Name:<br>
+                <input type="text" ng-model="user.firstName" required>
+              </div>
+              <div class="col-md-12">
+                Last Name:<br>
+                <input type="text" ng-model="user.lastName" required>
+              </div>
+              <div class="col-md-12">
+                E-mail: <br>
+                <input type="email" ng-model="user.email" required>
+              </div>
+              <div class="col-md-12">
+                Password: <br>
+                <input type="text" ng-model="user.password" required>
+              </div>
+              <div class="col-md-12">
+                Re<span class="letter-spacing"></span>-Type Password: <br>
+                <input type="text" ng-model="user.reTypePassword" required>
+              </div>
+              <div class="col-md-12">
+                <button type="submit" ng-click="update(user)" class="create-btn">Create</button>
+              </div>
             </div>
           </div>
         </div>
@@ -139,5 +143,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="parallax.js"></script>
     <script src="animation.js"></script>
+    <script src="validation.js"></script>
   </body>
 </html>

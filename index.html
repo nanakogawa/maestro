@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>maestro! | music you love</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="parallax.css">
     <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="default.css">
   </head>
@@ -25,6 +24,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
+            <!--<li><a href="#">Hello!</a></li>-->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <span class="glyphicon glyphicon-user"></span><span class="caret"></span>
@@ -87,6 +87,33 @@
     <div class="create-account-container" id="create-account">
       <div class="create-account center">
         <h1>Create an Account</h1>
+        <div class="form-container center">
+          <div class="container">
+            <div class="col-md-12">
+              First Name:<br>
+              <input type="text" ng-model="user.firstName" required>
+            </div>
+            <div class="col-md-12">
+              Last Name:<br>
+              <input type="text" ng-model="user.lastName" required>
+            </div>
+            <div class="col-md-12">
+              E-mail: <br>
+              <input type="email" ng-model="user.email" required>
+            </div>
+            <div class="col-md-12">
+              Password: <br>
+              <input type="text" ng-model="user.password" required>
+            </div>
+            <div class="col-md-12">
+              Re<span class="letter-spacing"></span>-Type Password: <br>
+              <input type="text" ng-model="user.password" required>
+            </div>
+            <div class="col-md-12">
+              <button type="submit" ng-click="update(user)" class="create-btn">Create</button>
+            </div>
+          </div>
+        </div>
         <a href="#premium">
           <div class="glyphicon glyphicon-menu-down arrow-white down-arrow-three bounce center"></div>
         </a>

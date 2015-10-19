@@ -48,6 +48,11 @@ a:hover {
   background-color: transparent;
 }
 
+.create-btn:hover {
+  font-weight: bold;
+  border: 2px solid #fff;
+}
+
 .premium-btn:hover {
   border: 1px solid rgb(255, 189, 123);
   color: #ffbd7b;
@@ -156,7 +161,7 @@ h1.welcome {
 }
 
 .down-arrow-two {
-  margin: 30px 0 0 0;
+  margin-top: 15px;
   color: #ff445f;
   font-size: 30px;
 }
@@ -174,13 +179,13 @@ h1.welcome {
 .search-container {
   background: #ff615d;
   height: 600px;
-  margin: 50px 0 0 0;
+  margin-top: 50px;
 }
 
 .create-account-container {
   height: 1000px;
   width: 100%;
-  padding: 93px 0 0 0;
+  padding-top: 93px;
 }
 
 .create-account {
@@ -190,17 +195,49 @@ h1.welcome {
   background-size: cover;
   width: 100%;
   height: 900px;
-  padding: 60px 0 0 0;
+  padding-top: 105px;
   color: #fff;
+}
+
+.form-container {
+  margin-top: 35px;
+  letter-spacing: 0.015em;
+}
+
+input {
+  color: #000;
+  line-height: 30px;
+  width: 350px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.letter-spacing {
+  margin-right: 1px;
+}
+
+.create-btn {
+  font-family: helvetica-neue-thin, sans-serif;
+  font-size: 25px;
+  letter-spacing: 0.01em;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 30px 15px;
+  background: transparent;
+  margin: 30px;
 }
 
 .down-arrow-three {
   color: #ffffff;
   font-size: 30px;
+  margin-top: 60px;
 }
 
 .try-premium-container {
-  height: 175px;
+  height: 183px;
   width: 100%;
   padding: 62px 0 0 0;
 }

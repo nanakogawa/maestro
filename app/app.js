@@ -1,7 +1,8 @@
  // Dependencies
  var express = require('express'),
-     request = require('request'),
-     path = require('path');
+  request = require('request'),
+  path = require('path'),
+  spotify = require('./spotify.js');
 
  // Express
  var app = express();
@@ -13,6 +14,7 @@
  app.use(express.static(__dirname + '/../images'));
  app.use(express.static(__dirname + '/../js'));
  app.use(express.static(__dirname + '/../json'));
+ app.use('/spotify.js', spotify);
 
  app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/../index.html'));

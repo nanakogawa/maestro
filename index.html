@@ -26,10 +26,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <!--<li><a href="#">Hello!</a></li>-->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <span class="glyphicon glyphicon-user"></span><span class="caret"></span>
+                <div user-name></div><span class="glyphicon glyphicon-user"></span><span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
                 <li><a href="#">Log In</a></li>
@@ -66,13 +65,22 @@
         <div class="col-md-5">
           <h1>My Playlist</h1>
           <div class="playlist-container">
-            <!-- music -->
+            <iframe src="https://embed.spotify.com/?uri=spotify:track:4th1RQAelzqgY7wL53UGQt" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
           </div>
         </div>
         <div class="col-md-7">
           <h1>Search Music</h1>
           <div class="search-container">
-            <!-- music -->
+            <div class="search-form">
+              <div class="col-xs-10">
+                <input type="text" class="search-input">
+              </div>
+              <div class="col-sm-2 search-btn-col">
+                <button type="button" class="btn btn-default search-btn">
+                  Search
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -89,7 +97,7 @@
     <div class="create-account-container" id="create-account">
       <div class="create-account center">
         <h1>Create an Account</h1>
-        <div class="form-container center">
+        <div class="form-container center" showValidation>
           <div ng-controller="FormValController">
             <div class="container">
               <div class="col-md-12">
@@ -114,13 +122,13 @@
                 Password:
                 <span class="glyphicon glyphicon-ok ok-check val-sign userPass"></span>
                 <span class="glyphicon glyphicon-remove x-mark val-sign userPass"></span><br>
-                <input type="text" ng-model="user.password" required>
+                <input type="password" ng-model="user.password" required>
               </div>
               <div class="col-md-12">
                 Re<span class="letter-spacing"></span>-Type Password:
                 <span class="glyphicon glyphicon-ok ok-check val-sign userRePass"></span>
                 <span class="glyphicon glyphicon-remove x-mark val-sign userRePass"></span><br>
-                <input type="text" ng-model="user.reTypePassword" required>
+                <input type="password" ng-model="user.reTypePassword" required>
               </div>
               <div class="col-md-12">
                 <button type="submit" ng-click="update(user)" class="create-btn">Create</button>
@@ -154,5 +162,6 @@
     <script src="parallax.js"></script>
     <script src="animation.js"></script>
     <script src="validation.js"></script>
+    <script src="userNameDirective.js"></script>
   </body>
 </html>

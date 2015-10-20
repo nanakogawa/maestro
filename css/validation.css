@@ -1,9 +1,9 @@
 input.ng-invalid.ng-touched {
-    border: 2px solid #FA787E;
+    border: 2px solid #ff000f;
 }
 
 input.ng-valid.ng-touched {
-    border: 2px solid #78FA89;
+    border: 2px solid #00e12a;
 }
 
 .val-sign {

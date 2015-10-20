@@ -171,15 +171,45 @@ h1.welcome {
 }
 
 .playlist-container {
-  background: #c5c5c5;
+  background: rgb(40, 40, 40);
   height: 600px;
   margin: 50px 0;
 }
 
 .search-container {
-  background: #ff615d;
+  background: #282828;
   height: 600px;
   margin-top: 50px;
+}
+
+.search-container {
+  padding-top: 20px;
+  text-align: left;
+}
+
+.search-input {
+  background: url('search-icon.png') no-repeat #ffffff 1%;
+  background-size: 25px;
+  width: 90%;
+  text-align: left;
+  border-radius: 5px;
+  padding-left: 40px;
+  margin-left: 35px;
+}
+
+.search-btn-col {
+  text-align: left !important;
+}
+
+.search-btn {
+  font-family: helvetica-neue-thin, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  background-color: #ff445f;
+  width: 120px;
+  height: 36px;
+  border: 1px solid #ff445f;
+  margin-left: -45px;
 }
 
 .create-account-container {

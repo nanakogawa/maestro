@@ -18,6 +18,7 @@
  function updateName() {
    var name = document.getElementById('username-update');
    name.style.display = 'block';
+   name.style.fontWeight = 'bold';
  }
 
  var updateUsername = document.getElementById('updateUsername');

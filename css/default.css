@@ -85,6 +85,19 @@ a:hover {
   border: none !important;
 }
 
+pre {
+  font-family: helvetica-neue-ultra-thin2, sans-serif !important;
+  font-size: 18px;
+  background-color: #fff !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 -20px 0 0 !important;
+}
+
+#username-update {
+  display: none;
+}
+
 .dropdown-menu {
   font-size: 18px;
 }
@@ -187,7 +200,7 @@ h1.welcome {
   text-align: left;
 }
 
-.search-input {
+#searchInput {
   background: url('search-icon.png') no-repeat #ffffff 1%;
   background-size: 25px;
   width: 90%;

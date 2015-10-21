@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="default.css">
   </head>
   <body>
+  <div ng-controller="FormValController">
     <nav class="navbar navbar-default navbar-fixed-top" id="nav">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -24,11 +25,14 @@
           <a class="navbar-brand" href="/"><h1 class="logo">maestr<span class="glyphicon glyphicon-headphones headphones"></span></h1></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><pre id ="username-update">{{master | json}}</pre></a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <div user-name></div><span class="glyphicon glyphicon-user"></span><span class="caret"></span>
+                <span class="glyphicon glyphicon-user"></span><span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
                 <li><a href="#">Log In</a></li>
@@ -65,18 +69,18 @@
         <div class="col-md-5">
           <h1>My Playlist</h1>
           <div class="playlist-container">
-            <iframe src="https://embed.spotify.com/?uri=spotify:track:4th1RQAelzqgY7wL53UGQt" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>
+            <!--<iframe src="https://embed.spotify.com/?uri=spotify:track:4th1RQAelzqgY7wL53UGQt" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>-->
           </div>
         </div>
         <div class="col-md-7">
           <h1>Search Music</h1>
           <div class="search-container">
-            <div class="search-form">
+            <div id="search-form">
               <div class="col-xs-10">
-                <input type="text" class="search-input">
+                <input type="text" id="searchInput">
               </div>
               <div class="col-sm-2 search-btn-col">
-                <button type="button" class="btn btn-default search-btn">
+                <button type="button" class="btn btn-default search-btn" id="search-btn">
                   Search
                 </button>
               </div>
@@ -98,7 +102,7 @@
       <div class="create-account center">
         <h1>Create an Account</h1>
         <div class="form-container center" showValidation>
-          <div ng-controller="FormValController">
+
             <div class="container">
               <div class="col-md-12">
                 First Name:
@@ -131,7 +135,7 @@
                 <input type="password" ng-model="user.reTypePassword" required>
               </div>
               <div class="col-md-12">
-                <button type="submit" ng-click="update(user)" class="create-btn">Create</button>
+                <button type="submit" ng-click="update(user)" class="create-btn" id="updateUsername">Create</button>
               </div>
             </div>
           </div>
@@ -162,6 +166,7 @@
     <script src="parallax.js"></script>
     <script src="animation.js"></script>
     <script src="validation.js"></script>
-    <script src="userNameDirective.js"></script>
+    <script src="playlist.js"></script>
+    <!--<script src="userNameDirective.js"></script>-->
   </body>
 </html>

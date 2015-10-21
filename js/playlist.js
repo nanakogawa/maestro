@@ -24,6 +24,12 @@
   return JSON.stringify(formData);
  }
 
+ function clearSearchInfo() {
+  var info = document.getElementById('search-info');
+  info.style.display = 'none';
+ }
+
 
  var searchButton = document.getElementById('search-btn');
  searchButton.addEventListener('click', searchData, false);
+ searchButton.addEventListener('click', clearSearchInfo, false);

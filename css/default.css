@@ -85,21 +85,17 @@ a:hover {
   border: none !important;
 }
 
-pre {
-  font-family: helvetica-neue-ultra-thin2, sans-serif !important;
-  font-size: 18px;
-  background-color: #fff !important;
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 -20px 0 0 !important;
-}
-
 #username-update {
+  margin: 0 -20px 0 0;
   display: none;
 }
 
 .dropdown-menu {
   font-size: 18px;
+}
+
+.dropmenu-item {
+  display: block;
 }
 
 .navbar-brand {

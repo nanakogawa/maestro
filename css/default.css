@@ -189,10 +189,7 @@ h1.welcome {
   background: #282828;
   height: 600px;
   margin-top: 50px;
-}
-
-.search-container {
-  padding-top: 20px;
+  padding-top: 30px;
   text-align: left;
 }
 
@@ -219,6 +216,21 @@ h1.welcome {
   height: 36px;
   border: 1px solid #ff445f;
   margin-left: -45px;
+}
+
+#search-info {
+  color: #fff;
+  display: block;
+}
+
+.big-search {
+  width: 200px;
+  margin-top: 95px;
+  opacity: 0.15;
+}
+
+.search-info-body {
+  color: #bbbbbb;
 }
 
 .create-account-container {

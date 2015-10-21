@@ -13,96 +13,93 @@
     <link rel="stylesheet" href="default.css">
   </head>
   <body>
-  <div ng-controller="FormValController">
-    <nav class="navbar navbar-default navbar-fixed-top" id="nav">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed collapse-button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="glyphicon glyphicon-menu-hamburger hamburger"></span>
-          </button>
-          <a class="navbar-brand" href="/"><h1 class="logo">maestr<span class="glyphicon glyphicon-headphones headphones"></span></h1></a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><pre id ="username-update">{{master | json}}</pre></a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <span class="glyphicon glyphicon-user"></span><span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Log In</a></li>
-                <li><a href="#create-account">Sign Up</a></li>
-              </ul>
-            </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-    <section class="concert-banner">
-      <div class="col-lg-5 col-md-6 banner-text">
-        <h1 class="welcome">Welcome!</h1>
-        Browse through millions of tracks in all genres.<br>
-        Create a playlist and choose what you want to listen to.<br>
-        Listen to it where ever you are on any device.<br><br>
-        <a href="#playlist-search">
-          <button type="button" class="btn btn-default start-listening-btn">Start Listening!</button>
-        </a>
-      </div>
-      <div class="col-xs-12 center banner-arrow">
-        <a href="#playlist-search">
-          <div class="glyphicon glyphicon-menu-down arrow-white down-arrow-one bounce center"></div>
-        </a>
-      </div>
-      <video autoplay loop muted id="fullscreen">
-        <source src="party.mp4" type="video/mp4">
-      </video>
-    </section>
-    <div class="playlist-search-container center" id="playlist-search">
-      <div class="container-fluid">
-        <div class="col-md-5">
-          <h1>My Playlist</h1>
-          <div class="playlist-container">
-            <!--<iframe src="https://embed.spotify.com/?uri=spotify:track:4th1RQAelzqgY7wL53UGQt" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>-->
+    <div ng-controller="FormValController">
+      <nav class="navbar navbar-default navbar-fixed-top" id="nav">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed collapse-button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="glyphicon glyphicon-menu-hamburger hamburger"></span>
+            </button>
+            <a class="navbar-brand" href="/"><h1 class="logo">maestr<span class="glyphicon glyphicon-headphones headphones"></span></h1></a>
           </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" id="username-update">{{master | json}}</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <span class="glyphicon glyphicon-user"></span><span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Log In</a></li>
+                  <li><a href="#create-account">Sign Up</a></li>
+                </ul>
+              </li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      <section class="concert-banner">
+        <div class="col-lg-5 col-md-6 banner-text">
+          <h1 class="welcome">Welcome!</h1>
+          Browse through millions of tracks in all genres.<br>
+          Create a playlist and choose what you want to listen to.<br>
+          Listen to it where ever you are on any device.<br><br>
+          <a href="#playlist-search">
+            <button type="button" class="btn btn-default start-listening-btn">Start Listening!</button>
+          </a>
         </div>
-        <div class="col-md-7">
-          <h1>Search Music</h1>
-          <div class="search-container">
-            <div id="search-form">
-              <div class="col-xs-10">
-                <input type="text" id="searchInput">
-              </div>
-              <div class="col-sm-2 search-btn-col">
-                <button type="button" class="btn btn-default search-btn" id="search-btn">
-                  Search
-                </button>
+        <div class="col-xs-12 center banner-arrow">
+          <a href="#playlist-search">
+            <div class="glyphicon glyphicon-menu-down arrow-white down-arrow-one bounce center"></div>
+          </a>
+        </div>
+        <video autoplay loop muted id="fullscreen">
+          <source src="party.mp4" type="video/mp4">
+        </video>
+      </section>
+      <div class="playlist-search-container center" id="playlist-search">
+        <div class="container-fluid">
+          <div class="col-md-5">
+            <h1>My Playlist</h1>
+            <div class="playlist-container">
+              <!--<iframe src="https://embed.spotify.com/?uri=spotify:track:4th1RQAelzqgY7wL53UGQt" width="100%" height="100%" frameborder="0" allowtransparency="true"></iframe>-->
+            </div>
+          </div>
+          <div class="col-md-7">
+            <h1>Search Music</h1>
+            <div class="search-container">
+              <div id="search-form">
+                <div class="col-xs-10">
+                  <input type="text" id="searchInput">
+                </div>
+                <div class="col-sm-2 search-btn-col">
+                  <button type="button" class="btn btn-default search-btn" id="search-btn">
+                    Search
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="down-arrow-container center">
-      <div class="container-fluid">
-        <div class="col-md-12">
-          <a href="#create-account">
-            <div class="glyphicon glyphicon-menu-down arrow-pink down-arrow-two bounce"></div>
-          </a>
+      <div class="down-arrow-container center">
+        <div class="container-fluid">
+          <div class="col-md-12">
+            <a href="#create-account">
+              <div class="glyphicon glyphicon-menu-down arrow-pink down-arrow-two bounce"></div>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="create-account-container" id="create-account">
-      <div class="create-account center">
-        <h1>Create an Account</h1>
-        <div class="form-container center" showValidation>
-
+      <div class="create-account-container" id="create-account">
+        <div class="create-account center">
+          <h1>Create an Account</h1>
+          <div class="form-container center" showValidation>
             <div class="container">
               <div class="col-md-12">
                 First Name:

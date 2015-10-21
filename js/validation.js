@@ -1,11 +1,11 @@
- var app = angular.module('myApp', []);
+var app = angular.module('myApp', []);
 
  app.controller('FormValController', ['$scope', function($scope) {
 
   $scope.master = {};
 
   $scope.update = function(user) {
-   $scope.master = angular.copy('Hello, ' + user.firstName);
+   $scope.master = angular.copy('Hello, ' +  user.firstName);
   };
 
   $scope.reset = function() {
@@ -16,9 +16,9 @@
  }]);
 
  function updateName() {
-   var name = document.getElementById('username-update');
-   name.style.display = 'block';
-   name.style.fontWeight = 'bold';
+  var name = document.getElementById('username-update');
+  name.style.display = 'block';
+  name.style.fontWeight = 'bold';
  }
 
  var updateUsername = document.getElementById('updateUsername');

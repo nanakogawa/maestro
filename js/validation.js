@@ -5,7 +5,7 @@
   $scope.master = {};
 
   $scope.update = function(user) {
-   $scope.master = angular.copy(user);
+   $scope.master = angular.copy('Hello, ' + user.firstName);
   };
 
   $scope.reset = function() {
@@ -15,3 +15,10 @@
   $scope.reset();
  }]);
 
+ function updateName() {
+   var name = document.getElementById('username-update');
+   name.style.display = 'block';
+ }
+
+ var updateUsername = document.getElementById('updateUsername');
+ updateUsername.addEventListener('click', updateName, false);

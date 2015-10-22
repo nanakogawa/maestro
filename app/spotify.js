@@ -20,9 +20,9 @@
 
   var search = req.body.searchInput;
 
-  spotifyApi.searchTracks(search, {limit : 20, offset : 20})
+  spotifyApi.searchTracks(search, {limit : 30, offset : 20})
   .then(function(data) {
-   res.send(data);
+   res.send(data.body.tracks.items);
   },
   function(err) {
    console.error(err);

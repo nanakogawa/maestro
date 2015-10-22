@@ -21,5 +21,10 @@ var app = angular.module('myApp', []);
   name.style.fontWeight = 'bold';
  }
 
- var updateUsername = document.getElementById('updateUsername');
- updateUsername.addEventListener('click', updateName, false);
+ function formReset() {
+  $('.formInput').val('');
+ }
+
+ var submitButton = document.getElementById('submit');
+ submitButton.addEventListener('click', updateName, false);
+ submitButton.addEventListener('click', formReset, false);

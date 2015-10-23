@@ -83,10 +83,20 @@
                   </button>
                 </div>
               </div>
-              <div class="search-info center" id="search-info">
-                <img src="search-icon.png" class="big-search"><br>
-                <h2>Find your favorite music</h2>
-                <span class="search-info-body">Search for songs, artists, albums, and genres</span>
+              <div class="search-info center">
+                <div id="search-info">
+                  <img src="search-icon.png" class="big-search"><br>
+                  <h2>Find your favorite music</h2>
+                  <span class="search-info-body">Search for songs, artists, albums, and genres</span>
+                </div>
+                <div class="result-container left">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div id="result">
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -110,34 +120,34 @@
                 First Name:
                 <span class="glyphicon glyphicon-ok ok-check val-sign fName"></span>
                 <span class="glyphicon glyphicon-remove x-mark val-sign fName"></span><br>
-                <input type="text" ng-model="user.firstName" required>
+                <input type="text" ng-model="user.firstName" class="formInput" required>
               </div>
               <div class="col-md-12">
                 Last Name:
                 <span class="glyphicon glyphicon-ok ok-check val-sign lName"></span>
                 <span class="glyphicon glyphicon-remove x-mark val-sign lName"></span><br>
-                <input type="text" ng-model="user.lastName" required>
+                <input type="text" ng-model="user.lastName" class="formInput" required>
               </div>
               <div class="col-md-12">
                 E-mail:
                 <span class="glyphicon glyphicon-ok ok-check val-sign userEmail"></span>
                 <span class="glyphicon glyphicon-remove x-mark val-sign userEmail"></span><br>
-                <input type="email" ng-model="user.email" required>
+                <input type="email" ng-model="user.email" class="formInput" required>
               </div>
               <div class="col-md-12">
                 Password:
                 <span class="glyphicon glyphicon-ok ok-check val-sign userPass"></span>
                 <span class="glyphicon glyphicon-remove x-mark val-sign userPass"></span><br>
-                <input type="password" ng-model="user.password" required>
+                <input type="password" ng-model="user.password" class="formInput" required>
               </div>
               <div class="col-md-12">
                 Re<span class="letter-spacing"></span>-Type Password:
                 <span class="glyphicon glyphicon-ok ok-check val-sign userRePass"></span>
                 <span class="glyphicon glyphicon-remove x-mark val-sign userRePass"></span><br>
-                <input type="password" ng-model="user.reTypePassword" required>
+                <input type="password" ng-model="user.reTypePassword" class="formInput" required>
               </div>
               <div class="col-md-12">
-                <button type="submit" ng-click="update(user)" class="create-btn" id="updateUsername">Create</button>
+                <button type="submit" ng-click="update(user)" class="create-btn" id="submit">Create</button>
               </div>
             </div>
           </div>
@@ -169,6 +179,5 @@
     <script src="animation.js"></script>
     <script src="validation.js"></script>
     <script src="playlist.js"></script>
-    <!--<script src="userNameDirective.js"></script>-->
   </body>
 </html>

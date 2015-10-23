@@ -13,7 +13,8 @@
     for(var i = 0; i < searchResults.length; i++) {
 
      var eachResultDiv = document.createElement('div');
-     eachResultDiv.style.paddingBottom = '15px';
+     eachResultDiv.style.padding = '15px 0';
+     eachResultDiv.style.borderBottom = '1px solid #393939';
      var resultDiv = document.getElementById('result');
 
      var imgSpan = document.createElement('span');
@@ -32,11 +33,26 @@
      eachResultDiv.appendChild(trackSpan);
 
      var artistSpan = document.createElement('span');
+     artistSpan.setAttribute('class', 'artist');
      artistSpan.style.color = '#888';
      var artist = searchResults[i].artists[0].name;
      artistSpan.textContent = artist;
      eachResultDiv.appendChild(artistSpan);
 
+		 var audioDiv = document.createElement('div');
+		 audioDiv.setAttribute('class', 'audio');
+     var preview = searchResults[i].preview_url;
+     var audio = document.createElement('audio');
+     audio.setAttribute('controls', '');
+     var source = document.createElement('source');
+     source.setAttribute('src', preview);
+     source.setAttribute('type', 'audio/mpeg');
+     audio.appendChild(source);
+     audioDiv.appendChild(audio);
+     eachResultDiv.appendChild(audioDiv);
+
+     //console.log(preview);
+     console.log(searchResults);
     }
    }
   });

@@ -10,8 +10,20 @@
 
     var searchResults = JSON.parse(submitRequest.responseText);
 
-    for(var i = 0; i < 1; i++) {
-     console.log(searchResults);
+    for(var i = 0; i < searchResults.length; i++) {
+
+     var eachResultDiv = document.createElement('div');
+     eachResultDiv.style.paddingBottom = '15px';
+     var resultDiv = document.getElementById('result');
+
+     var imgSpan = document.createElement('span');
+     var album = searchResults[i].album.images[2].url;
+     var imgTag = document.createElement('img');
+     imgTag.setAttribute('src', album);
+     imgSpan.appendChild(imgTag);
+     eachResultDiv.appendChild(imgSpan);
+     resultDiv.appendChild(eachResultDiv);
+
     }
    }
   });
@@ -28,7 +40,6 @@
   var info = document.getElementById('search-info');
   info.style.display = 'none';
  }
-
 
  var searchButton = document.getElementById('search-btn');
  searchButton.addEventListener('click', searchData, false);

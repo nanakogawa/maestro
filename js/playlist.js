@@ -17,6 +17,15 @@
   eachDiv.appendChild(trackSpan);
  }
 
+ function showArtist(resultObject, numOfResult, eachDiv) {
+  var artistSpan = document.createElement('span');
+  artistSpan.setAttribute('class', 'artist');
+  artistSpan.style.color = '#888';
+  var artist = resultObject[numOfResult].artists[0].name;
+  artistSpan.textContent = artist;
+  eachDiv.appendChild(artistSpan);
+ }
+
  function showButton(track) {
   var buttonSpan = document.createElement('span');
   buttonSpan.style.float = 'right';
@@ -54,20 +63,12 @@
      var resultDiv = document.getElementById('result');
 
      var trackSpan = document.createElement('span');
-     trackSpan.setAttribute('class', 'track');
-     trackSpan.style.padding = '0 10px';
      eachResultDiv.appendChild(trackSpan);
 
      showImage(searchResults, i, eachResultDiv, resultDiv);
      showTrack(searchResults, i, eachResultDiv);
+     showArtist(searchResults, i, eachResultDiv);
      showButton(trackSpan);
-
-     var artistSpan = document.createElement('span');
-     artistSpan.setAttribute('class', 'artist');
-     artistSpan.style.color = '#888';
-     var artist = searchResults[i].artists[0].name;
-     artistSpan.textContent = artist;
-     eachResultDiv.appendChild(artistSpan);
 
 		 var audioDiv = document.createElement('div');
 		 audioDiv.setAttribute('class', 'audio');

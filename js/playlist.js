@@ -31,6 +31,12 @@
      trackSpan.textContent = trackName;
      eachResultDiv.appendChild(trackSpan);
 
+     var artistSpan = document.createElement('span');
+     artistSpan.style.color = '#888';
+     var artist = searchResults[i].artists[0].name;
+     artistSpan.textContent = artist;
+     eachResultDiv.appendChild(artistSpan);
+
     }
    }
   });

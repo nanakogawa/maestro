@@ -8,6 +8,32 @@
   divOfResults.appendChild(eachDiv);
  }
 
+ function showTrack(resultObject, numOfResult, eachDiv) {
+  var trackSpan = document.createElement('span');
+  trackSpan.setAttribute('class', 'track');
+  trackSpan.style.padding = '0 10px';
+  var trackName = resultObject[numOfResult].name;
+  trackSpan.textContent = trackName;
+  eachDiv.appendChild(trackSpan);
+ }
+
+ function showButton(track) {
+  var buttonSpan = document.createElement('span');
+  buttonSpan.style.float = 'right';
+  var button = document.createElement('button');
+  button.setAttribute('class', 'add-button');
+  button.style.background = '#ff445f';
+  button.style.border = 'none';
+  button.style.borderRadius = '50%';
+  button.style.padding = '8px 12px 4px 12px';
+  button.style.margin = '28px 30px 0 0';
+  var plus = document.createElement('span');
+  plus.setAttribute('class', 'glyphicon glyphicon-plus');
+  button.appendChild(plus);
+  buttonSpan.appendChild(button);
+  track.appendChild(buttonSpan);
+ }
+
  function searchData (event) {
   event.preventDefault();
   var submitRequest = new XMLHttpRequest();
@@ -27,14 +53,14 @@
      eachResultDiv.style.borderBottom = '1px solid #393939';
      var resultDiv = document.getElementById('result');
 
-     showImage(searchResults, i, eachResultDiv, resultDiv);
-
      var trackSpan = document.createElement('span');
      trackSpan.setAttribute('class', 'track');
      trackSpan.style.padding = '0 10px';
-     var trackName = searchResults[i].name;
-     trackSpan.textContent = trackName;
      eachResultDiv.appendChild(trackSpan);
+
+     showImage(searchResults, i, eachResultDiv, resultDiv);
+     showTrack(searchResults, i, eachResultDiv);
+     showButton(trackSpan);
 
      var artistSpan = document.createElement('span');
      artistSpan.setAttribute('class', 'artist');
@@ -54,21 +80,6 @@
      audio.appendChild(source);
      audioDiv.appendChild(audio);
      eachResultDiv.appendChild(audioDiv);
-
-     var buttonSpan = document.createElement('span');
-     buttonSpan.style.float = 'right';
-     var button = document.createElement('button');
-     button.setAttribute('class', 'add-button');
-     button.style.background = '#ff445f';
-     button.style.border = 'none';
-     button.style.borderRadius = '50%';
-     button.style.padding = '8px 12px 4px 12px';
-     button.style.margin = '28px 30px 0 0';
-     var plus = document.createElement('span');
-     plus.setAttribute('class', 'glyphicon glyphicon-plus');
-     button.appendChild(plus);
-     buttonSpan.appendChild(button);
-     trackSpan.appendChild(buttonSpan);
 
      console.log(searchResults);
     }

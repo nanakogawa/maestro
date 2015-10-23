@@ -24,6 +24,13 @@
      eachResultDiv.appendChild(imgSpan);
      resultDiv.appendChild(eachResultDiv);
 
+     var trackSpan = document.createElement('span');
+     trackSpan.setAttribute('class', 'track');
+     trackSpan.style.padding = '0 10px';
+     var trackName = searchResults[i].name;
+     trackSpan.textContent = trackName;
+     eachResultDiv.appendChild(trackSpan);
+
     }
    }
   });

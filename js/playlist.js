@@ -26,6 +26,20 @@
   eachDiv.appendChild(artistSpan);
  }
 
+ function showAudio(resultObject, numOfResult, eachDiv) {
+  var audioDiv = document.createElement('div');
+  audioDiv.setAttribute('class', 'audio');
+  var preview = resultObject[numOfResult].preview_url;
+  var audio = document.createElement('audio');
+  audio.setAttribute('controls', '');
+  var source = document.createElement('source');
+  source.setAttribute('src', preview);
+  source.setAttribute('type', 'audio/mpeg');
+  audio.appendChild(source);
+  audioDiv.appendChild(audio);
+  eachDiv.appendChild(audioDiv);
+ }
+
  function showButton(track) {
   var buttonSpan = document.createElement('span');
   buttonSpan.style.float = 'right';
@@ -68,21 +82,8 @@
      showImage(searchResults, i, eachResultDiv, resultDiv);
      showTrack(searchResults, i, eachResultDiv);
      showArtist(searchResults, i, eachResultDiv);
+     showAudio(searchResults, i, eachResultDiv);
      showButton(trackSpan);
-
-		 var audioDiv = document.createElement('div');
-		 audioDiv.setAttribute('class', 'audio');
-     var preview = searchResults[i].preview_url;
-     var audio = document.createElement('audio');
-     audio.setAttribute('controls', '');
-     var source = document.createElement('source');
-     source.setAttribute('src', preview);
-     source.setAttribute('type', 'audio/mpeg');
-     audio.appendChild(source);
-     audioDiv.appendChild(audio);
-     eachResultDiv.appendChild(audioDiv);
-
-     console.log(searchResults);
     }
    }
   });

@@ -13,7 +13,7 @@
     for(var i = 0; i < searchResults.length; i++) {
 
      var eachResultDiv = document.createElement('div');
-     eachResultDiv.style.padding = '15px 0';
+     eachResultDiv.style.padding = '15px 0 5px 0';
      eachResultDiv.style.borderBottom = '1px solid #393939';
      var resultDiv = document.getElementById('result');
 
@@ -51,7 +51,21 @@
      audioDiv.appendChild(audio);
      eachResultDiv.appendChild(audioDiv);
 
-     //console.log(preview);
+     var buttonSpan = document.createElement('span');
+     buttonSpan.style.float = 'right';
+     var button = document.createElement('button');
+     button.setAttribute('class', 'add-button');
+     button.style.background = '#ff445f';
+     button.style.border = 'none';
+     button.style.borderRadius = '50%';
+     button.style.padding = '8px 12px 6px 12px';
+     button.style.margin = '28px 30px 0 0';
+     var plus = document.createElement('span');
+     plus.setAttribute('class', 'glyphicon glyphicon-plus');
+     button.appendChild(plus);
+     buttonSpan.appendChild(button);
+     trackSpan.appendChild(buttonSpan);
+
      console.log(searchResults);
     }
    }

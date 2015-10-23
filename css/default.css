@@ -22,6 +22,10 @@ h1 {
   text-align: center !important;
 }
 
+.left {
+  text-align: left !important;
+}
+
 a:hover {
   color: #ff445f !important;
   background: none !important;
@@ -193,6 +197,11 @@ h1.welcome {
   text-align: left;
 }
 
+#search-form {
+  border-bottom: 1px solid #393939;
+  padding-bottom: 60px;
+}
+
 #searchInput {
   background: url('search-icon.png') no-repeat #ffffff 1%;
   background-size: 25px;
@@ -231,6 +240,23 @@ h1.welcome {
 
 .search-info-body {
   color: #bbbbbb;
+}
+
+.result-container {
+  height: 200px;
+}
+
+#result {
+  color: #fff;
+  height: 500px;
+  padding: 0 10px;
+  overflow-y: scroll;
+}
+
+.add-button:hover {
+  background: transparent !important;
+  border: 1px solid #ff445f !important;
+  color: #ff445f;
 }
 
 .create-account-container {

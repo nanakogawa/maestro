@@ -1,3 +1,13 @@
+ function showImage(resultObject, numOfResult, eachDiv, divOfResults) {
+  var imgSpan = document.createElement('span');
+  var album = resultObject[numOfResult].album.images[2].url;
+  var imgTag = document.createElement('img');
+  imgTag.setAttribute('src', album);
+  imgSpan.appendChild(imgTag);
+  eachDiv.appendChild(imgSpan);
+  divOfResults.appendChild(eachDiv);
+ }
+
  function searchData (event) {
   event.preventDefault();
   var submitRequest = new XMLHttpRequest();
@@ -17,13 +27,7 @@
      eachResultDiv.style.borderBottom = '1px solid #393939';
      var resultDiv = document.getElementById('result');
 
-     var imgSpan = document.createElement('span');
-     var album = searchResults[i].album.images[2].url;
-     var imgTag = document.createElement('img');
-     imgTag.setAttribute('src', album);
-     imgSpan.appendChild(imgTag);
-     eachResultDiv.appendChild(imgSpan);
-     resultDiv.appendChild(eachResultDiv);
+     showImage(searchResults, i, eachResultDiv, resultDiv);
 
      var trackSpan = document.createElement('span');
      trackSpan.setAttribute('class', 'track');
@@ -58,7 +62,7 @@
      button.style.background = '#ff445f';
      button.style.border = 'none';
      button.style.borderRadius = '50%';
-     button.style.padding = '8px 12px 6px 12px';
+     button.style.padding = '8px 12px 4px 12px';
      button.style.margin = '28px 30px 0 0';
      var plus = document.createElement('span');
      plus.setAttribute('class', 'glyphicon glyphicon-plus');
@@ -82,6 +86,8 @@
  function clearSearchInfo() {
   var info = document.getElementById('search-info');
   info.style.display = 'none';
+  var result = document.getElementById('result');
+  result.style.display = 'block';
  }
 
  var searchButton = document.getElementById('search-btn');

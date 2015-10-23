@@ -216,6 +216,12 @@ h1.welcome {
   text-align: left !important;
 }
 
+.search-btn:hover {
+  border: 1px solid #ff445f !important;
+  color: #ff445f !important;
+  background: transparent !important;
+}
+
 .search-btn {
   font-family: helvetica-neue-thin, sans-serif;
   font-size: 18px;

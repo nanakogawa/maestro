@@ -247,6 +247,7 @@ h1.welcome {
 }
 
 #result {
+  display: none;
   color: #fff;
   height: 500px;
   padding: 0 10px;

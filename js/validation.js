@@ -12,17 +12,25 @@
 
   $scope.getPlaylist = function() {
    console.log('searching...');
+   var formData = formSubmit();
 
    $http({
     method: 'POST',
     url: 'spotify/data',
     data: formData
-    }.then (function successCallback(response) {
+    }).then(function successCallback(response) {
      console.log(response);
     }, function errorCallback(response) {
-   }));
+   });
   };
  }]);
+
+ function formSubmit() {
+  var form = document.getElementById('search-form');
+  var data = new Object();
+  data.searchInput = document.getElementById('searchInput').value;
+  return JSON.stringify(data);
+ }
 
  function updateName() {
   var name = document.getElementById('username-update');

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<html ng-app="myApp">
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,7 +61,7 @@
           <source src="party.mp4" type="video/mp4">
         </video>
       </section>
-      <div class="playlist-search-container center" id="playlist-search">
+      <div ng-controller="PlaylistController" class="playlist-search-container center" id="playlist-search">
         <div class="container-fluid">
           <div class="col-md-5">
             <h1>My Playlist</h1>
@@ -77,7 +76,7 @@
                   <input type="text" id="searchInput">
                 </div>
                 <div class="col-sm-2 search-btn-col">
-                  <button type="button" class="btn btn-default search-btn" id="search-btn">
+                  <button type="button" ng-click="getPlaylist()" class="btn btn-default search-btn" id="search-btn">
                     Search
                   </button>
                 </div>

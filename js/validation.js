@@ -6,7 +6,23 @@
   $scope.showName = function() {
     $scope.firstName = 'Hello, ' + $scope.username;
   };
-}]);
+ }]);
+
+ app.controller('PlaylistController', ['$scope', '$http', function($scope, $http) {
+
+  $scope.getPlaylist = function() {
+   console.log('searching...');
+
+   $http({
+    method: 'POST',
+    url: 'spotify/data',
+    data: formData
+    }.then (function successCallback(response) {
+     console.log(response);
+    }, function errorCallback(response) {
+   }));
+  };
+ }]);
 
  function updateName() {
   var name = document.getElementById('username-update');

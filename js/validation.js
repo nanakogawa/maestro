@@ -8,7 +8,7 @@
   };
  }]);
 
- app.config( function($sceDelegateProvider) {
+ app.config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
    // Allow same origin resource loads.
    'self',
@@ -18,6 +18,8 @@
  });
 
  app.controller('PlaylistController', ['$scope', '$http', function($scope, $http) {
+
+  $scope.playlist = [];
 
   $scope.getPlaylist = function() {
    console.log('searching...');
@@ -32,10 +34,20 @@
      console.log(response.data);
     }, function errorCallback(response) {
    });
-  };
 
-  $scope.testing = function() {
-   console.log('working');
+   $scope.add = function($event) {
+    var song = $($event.currentTarget).attr('data-id');
+    $scope.songs.forEach(function(s) {
+     if(s.id === song) {
+      console.log('matched');
+      $scope.playlist.push(s);
+     }
+    });
+   };
+
+   $scope.testing = function() {
+    console.log('working');
+   };
   };
  }]);
 

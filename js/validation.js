@@ -20,6 +20,7 @@
  app.controller('PlaylistController', ['$scope', '$http', function($scope, $http) {
 
   $scope.playlist = [];
+  $scope.currentTrack = [];
 
   $scope.getPlaylist = function() {
    console.log('searching...');
@@ -45,8 +46,13 @@
     });
    };
 
-   $scope.testing = function() {
-    console.log('working');
+   $scope.play = function($event) {
+    var song = $($event.currentTarget).attr('data-id');
+    $scope.songs.forEach(function(s) {
+     if(s.id === id) {
+      $scope.playing = song;
+     }
+    })
    };
   };
  }]);

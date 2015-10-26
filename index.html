@@ -91,27 +91,29 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div id="result">
-                        <div ng-repeat="song in songs">
-                          <span class="img">
-                            <img src={{song.album.images[2].url}}>
-                          </span>
-                          <span class="track">
-                            {{song.name}}
-                          </span>
-                          <span class="button">
-                            <button type="button" class="add-button">
-                              <span class="glyphicon glyphicon-plus"></span>
-                            </button>
-                          </span>
-                          <span class="artist">
-                            {{song.artists[0].name}}
-                          </span>
-                          <div class="audio">
-                            <audio controls>
-                              <source src={{song.preview_url}} type="audio/mpeg">
-                            </audio>
+                        <!--<div class="each-result">-->
+                          <div ng-repeat="song in songs" class="each-result">
+                            <span class="img">
+                              <img src={{song.album.images[2].url}}>
+                            </span>
+                            <span class="track">
+                              {{song.name}}
+                            </span>
+                            <span class="button">
+                              <button type="button" class="add-button">
+                                <span class="glyphicon glyphicon-plus"></span>
+                              </button>
+                            </span>
+                            <span class="artist">
+                              {{song.artists[0].name}}
+                            </span>
+                            <div class="audio">
+                              <audio controls>
+                                <source src={{song.preview_url}} type="audio/mpeg">
+                              </audio>
+                            </div>
                           </div>
-                        </div>
+                        <!--</div>-->
                       </div>
                     </div>
                   </div>

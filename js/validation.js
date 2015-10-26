@@ -19,7 +19,8 @@
     url: 'spotify/data',
     data: formData
     }).then(function successCallback(response) {
-     console.log(response);
+     $scope.songs = response.data;
+     console.log(response.data);
     }, function errorCallback(response) {
    });
   };

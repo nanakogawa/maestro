@@ -266,6 +266,10 @@ h1.welcome {
   color: #ff445f;
 }
 
+.add-button {
+  float: right;
+}
+
 .create-account-container {
   height: 1000px;
   width: 100%;

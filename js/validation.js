@@ -23,6 +23,10 @@
     }, function errorCallback(response) {
    });
   };
+
+  $scope.testing = function() {
+   console.log('working');
+  };
  }]);
 
  function formSubmit() {

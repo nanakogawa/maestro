@@ -45,6 +45,7 @@
   buttonSpan.style.float = 'right';
   var button = document.createElement('button');
   button.setAttribute('class', 'add-button');
+  button.setAttribute('ng-click', 'testing()');
   button.style.background = '#ff445f';
   button.style.border = 'none';
   button.style.borderRadius = '50%';

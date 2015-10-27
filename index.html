@@ -69,8 +69,10 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="track-playing">
-                    <div class="col-xs-2 playing-img-icon">
-                    <img src={{playing.album.images[2].url}}>
+                    <div class="col-xs-2 playing-img-icon left">
+                      <span class="playing-img">
+                        <img src={{playing.album.images[2].url}}>
+                      </span>
                     </div>
                     <div class="col-xs-9">
                       <div class="col-xs-12 playing-track">
@@ -89,7 +91,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="added-tracks" ng-repeat="tracks in playlist">
-                    <button type="button" class="track-btn">
+                    <button type="button" ng-click="play($event)" data-id="{{tracks.id}}" class="track-btn">
                       <span class="number">1.</span>
                       <span class="track">{{tracks.name}}</span>
                       <span class="artist">{{tracks.artists[0].name}}</span>

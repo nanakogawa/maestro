@@ -197,6 +197,13 @@ h1.welcome {
   margin: 28px 0 0 28px;
 }
 
+.playing-img {
+  background-color: #ff445f;
+  height: 64px;
+  width: 64px;
+  margin: 28px 0 0 -15px;
+}
+
 .playing-track {
   padding-top: 28px;
 }

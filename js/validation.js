@@ -20,7 +20,7 @@
  app.controller('PlaylistController', ['$scope', '$http', function($scope, $http) {
 
   $scope.playlist = [];
-  $scope.currentTrack = [];
+  $scope.playing = [];
 
   $scope.getPlaylist = function() {
    console.log('searching...');
@@ -47,9 +47,9 @@
    };
 
    $scope.play = function($event) {
-    var song = $($event.currentTarget).attr('data-id');
-    $scope.songs.forEach(function(s) {
-     if(s.id === id) {
+    var id = $($event.currentTarget).attr('data-id');
+    $scope.songs.forEach(function(song) {
+     if(song.id === id) {
       $scope.playing = song;
      }
     })

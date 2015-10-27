@@ -5,35 +5,3 @@ input.ng-invalid.ng-touched {
 input.ng-valid.ng-touched {
     border: 2px solid #00e12a;
 }
-
-.val-sign {
-  font-size: 18px;
-  position: absolute;
-}
-
-.ok-check {
-  color: #00e12a;
-  display: none;
-}
-
-.x-mark {
-  color: #ff000f;
-  display: none;
-}
-
-.fName,
-.lName {
-  padding-left: 95px;
-}
-
-.userEmail {
-  padding-left: 115px;
-}
-
-.userPass {
-  padding-left: 98px;
-}
-
-.userRePass {
-  padding-left: 60px;
-}

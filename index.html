@@ -76,12 +76,12 @@
                     </div>
                     <div class="col-xs-9">
                       <div class="col-xs-12 playing-track">
-                        <span class="track">Track</span>
-                        <span class="artist">Artist</span>
+                        <span class="track">{{playing.name}}</span>
+                        <span class="artist">{{playing.artists[0].name}}</span>
                       </div>
                       <div class="col-xs-12 playing-audio">
                         <audio controls>
-                          <source src="{{playlist.preview_url}}" type="audio/mpeg">
+                          <source src={{playing.preview_url}} type="audio/mpeg">
                         </audio>
                       </div>
                     </div>

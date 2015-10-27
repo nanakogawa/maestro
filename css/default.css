@@ -192,15 +192,12 @@ h1.welcome {
 
 .playing-img-icon {
   background-color: #ff445f;
-  height: 64px;
-  width: 64px;
+  height: 62px;
+  width: 62px;
   margin: 28px 0 0 28px;
 }
 
 .playing-img {
-  background-color: #ff445f;
-  height: 64px;
-  width: 64px;
   margin: 28px 0 0 -15px;
 }
 

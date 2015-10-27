@@ -1,13 +1,5 @@
  var app = angular.module('myApp', []);
 
- app.controller('FormValController', ['$scope', function($scope) {
-  $scope.username = '';
-
-  $scope.showName = function() {
-    $scope.firstName = 'Hello, ' + $scope.username;
-  };
- }]);
-
  app.config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
    // Allow same origin resource loads.
@@ -16,6 +8,14 @@
    'https://p.scdn.co/mp3-preview/**'
   ]);
  });
+
+ app.controller('FormValController', ['$scope', function($scope) {
+  $scope.username = '';
+
+  $scope.showName = function() {
+    $scope.firstName = 'Hello, ' + $scope.username;
+  };
+ }]);
 
  app.controller('PlaylistController', ['$scope', '$http', function($scope, $http) {
 
@@ -54,6 +54,8 @@
      }
     })
    };
+
+   $scope.count = 0;
   };
  }]);
 

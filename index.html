@@ -92,7 +92,7 @@
                 <div class="col-md-12">
                   <div class="added-tracks" ng-repeat="tracks in playlist">
                     <button type="button" ng-click="play($event)" data-id="{{tracks.id}}" class="track-btn">
-                      <span class="number">1.</span>
+                      <span class="number">{{count}}.</span>
                       <span class="track">{{tracks.name}}</span>
                       <span class="artist">{{tracks.artists[0].name}}</span>
                     </button>
@@ -132,7 +132,7 @@
                             {{song.name}}
                          </span>
                           <span class="button">
-                            <button ng-click="add($event)" data-id={{song.id}} type="button" class="add-button">
+                            <button ng-click="add($event); count = count + 1" data-id={{song.id}} type="button" class="add-button">
                               <span class="glyphicon glyphicon-plus"></span>
                             </button>
                           </span>

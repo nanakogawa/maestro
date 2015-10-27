@@ -94,7 +94,7 @@
                 <div class="col-md-12">
                   <div class="added-tracks" ng-repeat="tracks in playlist">
                     <button type="button" ng-click="play($event)" data-id="{{tracks.id}}" class="track-btn">
-                      <span class="number">{{count}}.</span>
+                      <span class="number">{{$index + 1}}.</span>
                       <span class="track">{{tracks.name}}</span>
                       <span class="artist">{{tracks.artists[0].name}}</span>
                     </button>
@@ -134,7 +134,7 @@
                             {{song.name}}
                          </span>
                           <span class="button">
-                            <button ng-click="add($event); count = count + 1" data-id={{song.id}} type="button" class="add-button">
+                            <button ng-click="add($event)"  data-id={{song.id}} type="button" class="add-button">
                               <span class="glyphicon glyphicon-plus"></span>
                             </button>
                           </span>
@@ -221,8 +221,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="parallax.js"></script>
     <script src="animation.js"></script>
-    <script src="validation.js"></script>
-    <script src="playlist.js"></script>
+    <script src="my-app.js"></script>
+    <script src="search.js"></script>
     <!-- bower:js -->
     <!-- endbower -->
   </body>
